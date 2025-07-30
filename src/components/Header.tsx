@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import { Heart, Sparkles } from 'lucide-react';
 
-export default function Header() {
+export default function App() {
   useEffect(() => {
-    // Adiciona o script da VSL ao carregar o componente
     const scriptId = 'converteai-sdk';
     if (!document.getElementById(scriptId)) {
       const s = document.createElement('script');
@@ -40,7 +39,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Main headline */}
+        {/* Headline */}
         <div className="text-center mb-12 animate-fadeIn">
           <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight mb-6 drop-shadow-lg">
             Vagas abertas para trabalhar de casa com o{' '}
@@ -51,101 +50,76 @@ export default function Header() {
           </p>
         </div>
 
-        {/* VSL Player */}
-        <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-6 animate-slideUp">
+        {/* VSL Player com estilo completo */}
+        <div
+          id="ifr_688917cb8d9ea41a82c2ee13_wrapper"
+          style={{
+            margin: '30px auto',
+            width: '100%',
+            maxWidth: '600px',
+            borderRadius: '20px',
+            overflow: 'hidden',
+            border: '4px solid #ff69b4',
+            background: '#fff0fa',
+            boxShadow: '0 8px 18px rgba(255, 105, 180, 0.3)',
+          }}
+        >
           <div
-            id="ifr_688917cb8d9ea41a82c2ee13_wrapper"
-            style={{ margin: '0 auto', width: '100%' }}
+            id="ifr_688917cb8d9ea41a82c2ee13_aspect"
+            style={{ padding: '75% 0 0 0', position: 'relative' }}
           >
-            <div
-              id="ifr_688917cb8d9ea41a82c2ee13_aspect"
-              style={{ padding: '75% 0 0 0', position: 'relative' }}
-            >
-              <iframe
-                id="ifr_688917cb8d9ea41a82c2ee13"
-                frameBorder="0"
-                allowFullScreen
-                referrerPolicy="origin"
-                style={{
-                  position: 'absolute',
-                  top: 0,
-                  left: 0,
-                  width: '100%',
-                  height: '100%',
-                }}
-                src="about:blank"
-                onLoad={(e) => {
-                  const iframe = e.currentTarget;
-                  // Atualiza a src após o iframe carregar para evitar problemas de CSP
-                  iframe.onload = null;
-                  iframe.src =
-                    'https://scripts.converteai.net/89404745-c035-4e42-8131-5bb293b01f71/players/688917cb8d9ea41a82c2ee13/v4/embed.html' +
-                    (location.search || '?') +
-                    '&vl=' +
-                    encodeURIComponent(location.href);
-                }}
-              />
-            </div>
+            <iframe
+              id="ifr_688917cb8d9ea41a82c2ee13"
+              frameBorder="0"
+              allowFullScreen
+              src="about:blank"
+              referrerPolicy="origin"
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                border: 'none',
+              }}
+              onLoad={(e) => {
+                const iframe = e.currentTarget;
+                iframe.onload = null;
+                iframe.src =
+                  'https://scripts.converteai.net/89404745-c035-4e42-8131-5bb293b01f71/players/688917cb8d9ea41a82c2ee13/v4/embed.html' +
+                  (location.search || '?') +
+                  '&vl=' +
+                  encodeURIComponent(location.href);
+              }}
+            ></iframe>
           </div>
         </div>
       </div>
 
-      {/* Custom CSS for animations */}
-      <style jsx>{`
+      {/* Custom animations */}
+      <style>{`
         @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
         }
-
-        @keyframes slideUp {
-          from {
-            opacity: 0;
-            transform: translateY(40px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-
         @keyframes float {
-          0%,
-          100% {
-            transform: translateY(0px);
-          }
-          50% {
-            transform: translateY(-20px);
-          }
+          0%, 100% { transform: translateY(0); }
+          50% { transform: translateY(-20px); }
         }
-
         .animate-fadeIn {
           animation: fadeIn 1s ease-out;
         }
-
-        .animate-slideUp {
-          animation: slideUp 1s ease-out 0.5s both;
-        }
-
         .strawberry-float,
         .strawberry-float-2 {
           animation: float 3s ease-in-out infinite;
         }
-
         .candy-float,
         .candy-float-2 {
           animation: float 2.5s ease-in-out infinite reverse;
         }
-
         .heart-float {
           animation: float 2s ease-in-out infinite;
         }
-
         .sparkle-float {
           animation: float 3.5s ease-in-out infinite;
         }
