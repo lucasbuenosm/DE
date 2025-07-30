@@ -1,7 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Heart, Sparkles } from 'lucide-react';
 
 export default function Header() {
+  useEffect(() => {
+    // Adiciona o script da VSL ao carregar o componente
+    const scriptId = 'converteai-sdk';
+    if (!document.getElementById(scriptId)) {
+      const s = document.createElement('script');
+      s.src = 'https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js';
+      s.async = true;
+      s.id = scriptId;
+      document.head.appendChild(s);
+    }
+  }, []);
+
   return (
     <header className="relative min-h-screen bg-gradient-to-br from-pink-500 via-red-400 to-pink-600 overflow-hidden">
       {/* Floating animations */}
@@ -41,8 +53,39 @@ export default function Header() {
 
         {/* VSL Player */}
         <div className="max-w-4xl mx-auto bg-white rounded-2xl shadow-2xl p-6 animate-slideUp">
-          <div className="aspect-video bg-gray-100 rounded-xl overflow-hidden">
-            <div id="ifr_688bfbb0f4c94d5d9babc2a6ef63c8c1" className="w-full h-full"></div>
+          <div
+            id="ifr_688917cb8d9ea41a82c2ee13_wrapper"
+            style={{ margin: '0 auto', width: '100%' }}
+          >
+            <div
+              id="ifr_688917cb8d9ea41a82c2ee13_aspect"
+              style={{ padding: '75% 0 0 0', position: 'relative' }}
+            >
+              <iframe
+                id="ifr_688917cb8d9ea41a82c2ee13"
+                frameBorder="0"
+                allowFullScreen
+                referrerPolicy="origin"
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                }}
+                src="about:blank"
+                onLoad={(e) => {
+                  const iframe = e.currentTarget;
+                  // Atualiza a src após o iframe carregar para evitar problemas de CSP
+                  iframe.onload = null;
+                  iframe.src =
+                    'https://scripts.converteai.net/89404745-c035-4e42-8131-5bb293b01f71/players/688917cb8d9ea41a82c2ee13/v4/embed.html' +
+                    (location.search || '?') +
+                    '&vl=' +
+                    encodeURIComponent(location.href);
+                }}
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -50,40 +93,59 @@ export default function Header() {
       {/* Custom CSS for animations */}
       <style jsx>{`
         @keyframes fadeIn {
-          from { opacity: 0; transform: translateY(20px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
-        
+
         @keyframes slideUp {
-          from { opacity: 0; transform: translateY(40px); }
-          to { opacity: 1; transform: translateY(0); }
+          from {
+            opacity: 0;
+            transform: translateY(40px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
-        
+
         @keyframes float {
-          0%, 100% { transform: translateY(0px); }
-          50% { transform: translateY(-20px); }
+          0%,
+          100% {
+            transform: translateY(0px);
+          }
+          50% {
+            transform: translateY(-20px);
+          }
         }
-        
+
         .animate-fadeIn {
           animation: fadeIn 1s ease-out;
         }
-        
+
         .animate-slideUp {
           animation: slideUp 1s ease-out 0.5s both;
         }
-        
-        .strawberry-float, .strawberry-float-2 {
+
+        .strawberry-float,
+        .strawberry-float-2 {
           animation: float 3s ease-in-out infinite;
         }
-        
-        .candy-float, .candy-float-2 {
+
+        .candy-float,
+        .candy-float-2 {
           animation: float 2.5s ease-in-out infinite reverse;
         }
-        
+
         .heart-float {
           animation: float 2s ease-in-out infinite;
         }
-        
+
         .sparkle-float {
           animation: float 3.5s ease-in-out infinite;
         }
