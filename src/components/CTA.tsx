@@ -25,7 +25,7 @@ export default function CTA() {
         {/* Main CTA Button */}
         <div className="text-center mb-12">
           <a
-            href="https://loja-mns.mycartpanda.com/checkout/191350063:1"
+            href="https://pagamento.morangolucrativo.app/checkout/191350063:1"
             target="_blank"
             rel="noopener noreferrer"
             className="group inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow"
