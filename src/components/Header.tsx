@@ -46,19 +46,17 @@ export default function App() {
         <div className="candy-float-2 absolute bottom-60 left-8 text-2xl animate-pulse delay-300">🍭</div>
       </div>
 
-      <div className="relative z-10 container mx-auto px-4 py-8">
-       {/* Logo otimizado e proporcional */}
-<div className="text-center mt-2 mb-6">
-  <div className="inline-block bg-white rounded-full p-3 shadow-lg max-w-[135px] w-full mx-auto">
-    <img 
-      src="https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753887397682-Design+sem+nome+%2859%29.png?w=200&auto=compress&fit=max" 
-      alt="Docinho Express Logo"
-      className="w-full h-auto object-contain"
-    />
-  </div>
-</div>
-
-
+      <div className="relative z-10 container mx-auto px-4 pt-2 pb-8">
+        {/* Logo otimizado e proporcional */}
+        <div className="text-center mb-8">
+          <div className="inline-block bg-white rounded-full p-3 shadow-lg max-w-[135px] w-full mx-auto">
+            <img 
+              src="https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753887397682-Design+sem+nome+%2859%29.png?w=200&auto=compress&fit=max" 
+              alt="Docinho Express Logo"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
 
         {/* Headline */}
         <div className="text-center mb-12 animate-fadeIn">
