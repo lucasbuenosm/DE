@@ -2,6 +2,12 @@ import React from 'react';
 import { ArrowRight, Clock, Users } from 'lucide-react';
 
 export default function CTA() {
+  const handleCheckoutClick = () => {
+    if (typeof window !== 'undefined' && typeof fbq !== 'undefined') {
+      fbq('track', 'InitiateCheckout');
+    }
+  };
+
   return (
     <section className="py-20 bg-gradient-to-br from-green-500 via-green-600 to-emerald-600 relative overflow-hidden">
       {/* Background animations */}
@@ -28,6 +34,7 @@ export default function CTA() {
             href="https://pagamento.morangolucrativo.app/checkout/191350063:1"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleCheckoutClick}
             className="group inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow"
           >
             <span className="flex items-center justify-center gap-3">
