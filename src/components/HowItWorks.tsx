@@ -10,7 +10,7 @@ const steps = [
   {
     icon: <PlayCircle className="w-8 h-8" />,
     title: "Aprenda",
-    description: "Aprende tudo com as videoaulas simples e práticas."
+    description: "Aprende tudo com as video aulas simples e práticas."
   },
   {
     icon: <DollarSign className="w-8 h-8" />,
