@@ -24,12 +24,17 @@ export default function CTA() {
 
         {/* Main CTA Button */}
         <div className="text-center mb-12">
-          <button className="group bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow">
+          <a
+            href="https://loja-mns.mycartpanda.com/checkout/191350063:1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow"
+          >
             <span className="flex items-center justify-center gap-3">
               QUERO GARANTIR MINHA VAGA AGORA
               <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
             </span>
-          </button>
+          </a>
         </div>
 
         {/* Urgency indicators */}
@@ -42,7 +47,6 @@ export default function CTA() {
                 Apenas hoje com desconto especial
               </p>
             </div>
-            
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 text-center">
               <Users className="w-8 h-8 text-yellow-300 mx-auto mb-3" />
               <p className="text-white font-semibold">
@@ -61,7 +65,7 @@ export default function CTA() {
               <p className="text-green-100">
                 e libera seu acesso <span className="font-bold">imediato</span> ao sistema.
               </p>
-              
+
               {/* Additional benefits */}
               <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
                 <div className="bg-green-600 bg-opacity-50 rounded-lg p-3">
@@ -77,7 +81,7 @@ export default function CTA() {
             </div>
           </div>
         </div>
-        
+
         {/* Social proof */}
         <div className="text-center mt-12">
           <p className="text-green-100 text-sm opacity-80">
@@ -88,14 +92,14 @@ export default function CTA() {
 
       <style jsx>{`
         @keyframes pulse-glow {
-          0%, 100% { 
+          0%, 100% {
             box-shadow: 0 0 20px rgba(255, 255, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.3);
           }
-          50% { 
+          50% {
             box-shadow: 0 0 30px rgba(255, 255, 0, 0.8), 0 0 60px rgba(255, 255, 0, 0.5);
           }
         }
-        
+
         .animate-pulse-glow {
           animation: pulse-glow 2s ease-in-out infinite;
         }
