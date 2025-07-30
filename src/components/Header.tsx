@@ -30,6 +30,12 @@ export default function App() {
     }
   }, []);
 
+  const handleCheckoutClick = () => {
+    if (typeof window !== 'undefined' && typeof fbq !== 'undefined') {
+      fbq('track', 'InitiateCheckout');
+    }
+  };
+
   return (
     <header className="relative min-h-screen bg-gradient-to-br from-pink-500 via-red-400 to-pink-600 overflow-hidden">
       {/* Floating animations */}
@@ -78,6 +84,7 @@ export default function App() {
             href="https://pagamento.morangolucrativo.app/checkout/191350063:1"
             target="_blank"
             rel="noopener noreferrer"
+            onClick={handleCheckoutClick}
             className="group inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow"
           >
             <span className="flex items-center justify-center gap-2">
