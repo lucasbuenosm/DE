@@ -3,13 +3,34 @@ import { Heart, Sparkles } from 'lucide-react';
 
 export default function App() {
   useEffect(() => {
-    const scriptId = 'converteai-sdk';
-    if (!document.getElementById(scriptId)) {
-      const s = document.createElement('script');
-      s.src = 'https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js';
-      s.async = true;
-      s.id = scriptId;
-      document.head.appendChild(s);
+    // Adiciona o script SDK
+    const s = document.createElement("script");
+    s.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
+    s.async = true;
+    document.head.appendChild(s);
+
+    // HTML original da VSL
+    const playerHTML = `
+      <div id="ifr_688917cb8d9ea41a82c2ee13_wrapper"
+           style="margin: 30px auto; width: 100%; max-width: 600px; border-radius: 20px; overflow: hidden;
+                  border: 4px solid #ff69b4; background: #fff0fa; box-shadow: 0 8px 18px rgba(255, 105, 180, 0.3);">
+        <div style="padding: 75% 0 0 0; position: relative;" id="ifr_688917cb8d9ea41a82c2ee13_aspect">
+          <iframe frameborder="0"
+                  allowfullscreen
+                  src="about:blank"
+                  id="ifr_688917cb8d9ea41a82c2ee13"
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                  referrerpolicy="origin"
+                  onload="this.onload=null; this.src='https://scripts.converteai.net/89404745-c035-4e42-8131-5bb293b01f71/players/688917cb8d9ea41a82c2ee13/v4/embed.html' + (location.search || '?') + '&vl=' + encodeURIComponent(location.href)">
+          </iframe>
+        </div>
+      </div>
+    `;
+
+    // Injeta o HTML diretamente
+    const container = document.getElementById('player-container');
+    if (container) {
+      container.innerHTML = playerHTML;
     }
   }, []);
 
@@ -50,50 +71,8 @@ export default function App() {
           </p>
         </div>
 
-        {/* VSL Player com estilo completo */}
-        <div
-          id="ifr_688917cb8d9ea41a82c2ee13_wrapper"
-          style={{
-            margin: '30px auto',
-            width: '100%',
-            maxWidth: '600px',
-            borderRadius: '20px',
-            overflow: 'hidden',
-            border: '4px solid #ff69b4',
-            background: '#fff0fa',
-            boxShadow: '0 8px 18px rgba(255, 105, 180, 0.3)',
-          }}
-        >
-          <div
-            id="ifr_688917cb8d9ea41a82c2ee13_aspect"
-            style={{ padding: '75% 0 0 0', position: 'relative' }}
-          >
-            <iframe
-              id="ifr_688917cb8d9ea41a82c2ee13"
-              frameBorder="0"
-              allowFullScreen
-              src="about:blank"
-              referrerPolicy="origin"
-              style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                border: 'none',
-              }}
-              onLoad={(e) => {
-                const iframe = e.currentTarget;
-                iframe.onload = null;
-                iframe.src =
-                  'https://scripts.converteai.net/89404745-c035-4e42-8131-5bb293b01f71/players/688917cb8d9ea41a82c2ee13/v4/embed.html' +
-                  (location.search || '?') +
-                  '&vl=' +
-                  encodeURIComponent(location.href);
-              }}
-            ></iframe>
-          </div>
-        </div>
+        {/* VSL Container */}
+        <div id="player-container" className="animate-fadeIn"></div>
       </div>
 
       {/* Custom animations */}
