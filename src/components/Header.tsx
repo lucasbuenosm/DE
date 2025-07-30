@@ -72,14 +72,14 @@ export default function App() {
 
         {/* CTA Button */}
         <div className="text-center mb-16">
-  <button className="group bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow">
-    <span className="flex items-center justify-center gap-2">
-      QUERO GARANTIR MINHA VAGA AGORA
-      <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
-    </span>
-  </button>
-</div>
-
+          <button className="group bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-lg md:text-xl px-8 py-4 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow">
+            <span className="flex items-center justify-center gap-2">
+              QUERO GARANTIR MINHA VAGA AGORA
+              <ArrowRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </button>
+        </div>
+      </div>
 
       <style>{`
         @keyframes fadeIn {
