@@ -5,42 +5,38 @@ const testimonials = [
   {
     name: "Juliana Costa",
     location: "Salvador, BA",
-    earning: "R$ 1.200",
-    period: "primeira semana",
+    earning: "R$ 8.590",
+    period: "3 primeiras semanas",
     image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-    type: "image"
+    type: "image",
+    quote: "Eu nunca imaginei que seria tão fácil começar e ganhar tão bem logo no começo!"
   },
   {
     name: "Patricia Lima",
     location: "Fortaleza, CE",
     earning: "R$ 850",
-    period: "primeiros 3 dias",
+    period: "primeiro dia!",
     image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-    type: "image"
+    type: "image",
+    quote: "Confesso que achei que era complicado... Mas foi tudo tão simples que fiquei surpresa."
   },
   {
     name: "Fernanda Souza",
     location: "Brasília, DF",
-    earning: "R$ 2.100",
+    earning: "R$ 10.200",
     period: "primeiro mês",
     image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-    type: "image"
+    type: "image",
+    quote: "Achei que precisava ter experiência, mas mesmo sem saber nada eu já comecei ganhando."
   },
   {
     name: "Camila Rodrigues",
     location: "Porto Alegre, RS",
     earning: "R$ 1.500",
-    period: "primeiras 2 semanas",
+    period: "primeiros 4 dias",
     image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-    type: "video"
-  },
-  {
-    name: "Roberta Alves",
-    location: "Recife, PE",
-    earning: "R$ 950",
-    period: "primeira semana",
-    image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-    type: "audio"
+    type: "video",
+    quote: "Me surpreendi com a facilidade. Em poucos dias já estava recebendo pedidos."
   }
 ];
 
@@ -51,7 +47,6 @@ export default function Testimonials() {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % testimonials.length);
     }, 4000);
-
     return () => clearInterval(interval);
   }, []);
 
@@ -68,7 +63,7 @@ export default function Testimonials() {
       {/* Background elements */}
       <div className="absolute top-10 right-10 text-6xl opacity-10 animate-bounce">🍓</div>
       <div className="absolute bottom-10 left-10 text-5xl opacity-10 animate-pulse">💖</div>
-      
+
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
@@ -100,19 +95,12 @@ export default function Testimonials() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        {/* Media type indicator */}
                         {testimonial.type === 'video' && (
                           <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-full">
                             <Play className="w-8 h-8 text-white fill-current" />
                           </div>
                         )}
-                        {testimonial.type === 'audio' && (
-                          <div className="absolute -bottom-2 -right-2 bg-green-500 rounded-full p-2">
-                            <div className="w-3 h-3 bg-white rounded-full animate-pulse"></div>
-                          </div>
-                        )}
-                        
-                        {/* Floating elements */}
+
                         <div className="absolute -top-3 -right-3 text-2xl animate-bounce">✨</div>
                       </div>
 
@@ -122,14 +110,14 @@ export default function Testimonials() {
                           {testimonial.name}
                         </h3>
                         <p className="text-gray-600 mb-4">{testimonial.location}</p>
-                        
+
                         <div className="bg-gradient-to-r from-green-400 to-green-600 rounded-xl p-4 text-white text-center mb-4">
                           <p className="text-3xl font-bold">{testimonial.earning}</p>
                           <p className="text-green-100">na {testimonial.period}</p>
                         </div>
-                        
+
                         <p className="text-gray-700 italic">
-                          "Nunca imaginei que seria tão simples e lucrativo. O Docinho Express mudou minha vida!"
+                          "{testimonial.quote}"
                         </p>
                       </div>
                     </div>
