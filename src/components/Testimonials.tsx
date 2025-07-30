@@ -16,7 +16,7 @@ const testimonials = [
     location: "Fortaleza, CE",
     earning: "R$ 850",
     period: "primeiro dia!",
-    image: "https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    image: "https://images.pexels.com/photos/8171191/pexels-photo-8171191.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Confesso que achei que era complicado... Mas foi tudo tão simples que fiquei surpresa."
   },
