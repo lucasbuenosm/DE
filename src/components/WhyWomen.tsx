@@ -3,17 +3,17 @@ import { Star, Heart } from 'lucide-react';
 
 const testimonials = [
   {
-    quote: "Fiz R$900 no primeiro dia!",
+    quote: "Estou muito Feliz, Fiz R$732 no primeiro dia!",
     name: "Ana Silva",
     location: "São Paulo, SP"
   },
   {
-    quote: "Trabalho leve, do meu jeito, com meu tempo.",
+    quote: "Graças a deus encontrei um trabalho que eu mesma defino os meus horários e dias.",
     name: "Maria Santos",
     location: "Rio de Janeiro, RJ"
   },
   {
-    quote: "É real. Não é curso, é trabalho de verdade.",
+    quote: "Fiquei tão feliz em receber tudo certinho, hoje em dia é dificil de confiar em alguém na internet",
     name: "Carla Oliveira",
     location: "Belo Horizonte, MG"
   }
