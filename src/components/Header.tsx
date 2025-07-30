@@ -47,17 +47,18 @@ export default function App() {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
-        {/* Logo com imagem */}
-        <div className="text-center mb-8">
-          <div className="inline-block bg-white rounded-full p-4 shadow-lg">
-            <img 
-              src="https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753887397682-Design+sem+nome+%2859%29.png" 
-              alt="Docinho Express Logo"
-              className="w-40 mx-auto"
-              style={{ objectFit: 'contain' }}
-            />
-          </div>
-        </div>
+       {/* Logo com imagem menor */}
+<div className="text-center mb-8">
+  <div className="inline-block bg-white rounded-full p-4 shadow-lg">
+    <img 
+      src="https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753887397682-Design+sem+nome+%2859%29.png" 
+      alt="Docinho Express Logo"
+      className="w-20 mx-auto"
+      style={{ objectFit: 'contain' }}
+    />
+  </div>
+</div>
+
 
         {/* Headline */}
         <div className="text-center mb-12 animate-fadeIn">
