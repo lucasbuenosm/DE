@@ -47,13 +47,13 @@ export default function App() {
       </div>
 
       <div className="relative z-10 container mx-auto px-4 py-8">
-       {/* Logo com imagem menor */}
+       {/* Logo otimizado e maior */}
 <div className="text-center mb-8">
   <div className="inline-block bg-white rounded-full p-4 shadow-lg">
     <img 
-      src="https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753887397682-Design+sem+nome+%2859%29.png" 
+      src="https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753887397682-Design+sem+nome+%2859%29.png?w=300&auto=compress&fit=max" 
       alt="Docinho Express Logo"
-      className="w-20 mx-auto"
+      className="w-48 mx-auto"
       style={{ objectFit: 'contain' }}
     />
   </div>
