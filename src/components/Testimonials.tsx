@@ -7,7 +7,7 @@ const testimonials = [
     location: "Salvador, BA",
     earning: "R$ 8.590",
     period: "3 primeiras semanas",
-    image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Eu nunca imaginei que seria tão fácil começar e ganhar tão bem logo no começo!"
   },
@@ -16,7 +16,7 @@ const testimonials = [
     location: "Fortaleza, CE",
     earning: "R$ 850",
     period: "primeiro dia!",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    image: "https://images.pexels.com/photos/1300402/pexels-photo-1300402.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Confesso que achei que era complicado... Mas foi tudo tão simples que fiquei surpresa."
   },
@@ -25,7 +25,7 @@ const testimonials = [
     location: "Brasília, DF",
     earning: "R$ 10.200",
     period: "primeiro mês",
-    image: "https://images.pexels.com/photos/415829/pexels-photo-415829.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Achei que precisava ter experiência, mas mesmo sem saber nada eu já comecei ganhando."
   },
@@ -34,7 +34,7 @@ const testimonials = [
     location: "Porto Alegre, RS",
     earning: "R$ 1.500",
     period: "primeiros 4 dias",
-    image: "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "video",
     quote: "Me surpreendi com a facilidade. Em poucos dias já estava recebendo pedidos."
   }
@@ -60,7 +60,6 @@ export default function Testimonials() {
 
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-pink-50 relative overflow-hidden">
-      {/* Background elements */}
       <div className="absolute top-10 right-10 text-6xl opacity-10 animate-bounce">🍓</div>
       <div className="absolute bottom-10 left-10 text-5xl opacity-10 animate-pulse">💖</div>
 
@@ -75,7 +74,6 @@ export default function Testimonials() {
           </p>
         </div>
 
-        {/* Carousel */}
         <div className="relative max-w-4xl mx-auto">
           <div className="overflow-hidden rounded-2xl shadow-2xl">
             <div 
@@ -86,7 +84,6 @@ export default function Testimonials() {
                 <div key={index} className="w-full flex-shrink-0">
                   <div className="bg-white p-8 md:p-12">
                     <div className="flex flex-col md:flex-row items-center gap-8">
-                      {/* Profile image */}
                       <div className="relative">
                         <div className="w-32 h-32 rounded-full overflow-hidden shadow-xl ring-4 ring-pink-200">
                           <img 
@@ -100,11 +97,9 @@ export default function Testimonials() {
                             <Play className="w-8 h-8 text-white fill-current" />
                           </div>
                         )}
-
                         <div className="absolute -top-3 -right-3 text-2xl animate-bounce">✨</div>
                       </div>
 
-                      {/* Content */}
                       <div className="flex-1 text-center md:text-left">
                         <h3 className="text-2xl font-bold text-gray-800 mb-2">
                           {testimonial.name}
@@ -127,7 +122,6 @@ export default function Testimonials() {
             </div>
           </div>
 
-          {/* Navigation buttons */}
           <button 
             onClick={prevSlide}
             className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white rounded-full p-3 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
@@ -142,7 +136,6 @@ export default function Testimonials() {
             <ChevronRight className="w-6 h-6 text-pink-600" />
           </button>
 
-          {/* Dots indicator */}
           <div className="flex justify-center mt-8 gap-2">
             {testimonials.map((_, index) => (
               <button
