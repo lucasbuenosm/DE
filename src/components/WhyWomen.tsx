@@ -5,17 +5,20 @@ const testimonials = [
   {
     quote: "Estou muito Feliz, Fiz R$732 no primeiro dia!",
     name: "Ana Silva",
-    location: "São Paulo, SP"
+    location: "São Paulo, SP",
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3w5fDB8MHxzZWFyY2h8M3x8YnJhemlsaWFuJTIwd29tYW58ZW58MHx8MHx8&w=100&q=80"
   },
   {
-    quote: "Graças a deus encontrei um trabalho que eu mesma defino os meus horários e dias.",
+    quote: "Graças a Deus encontrei um trabalho que eu mesma defino os meus horários e dias.",
     name: "Maria Santos",
-    location: "Rio de Janeiro, RJ"
+    location: "Rio de Janeiro, RJ",
+    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&ixid=M3w5fDB8MHxzZWFyY2h8Mnx8d29tYW4lMjB3aXRoJTIwbG9uZyUyMGhhaXJ8ZW58MHx8MHx8&w=100&q=80"
   },
   {
-    quote: "Fiquei tão feliz em receber tudo certinho, hoje em dia é dificil de confiar em alguém na internet",
+    quote: "Fiquei tão feliz em receber tudo certinho, hoje em dia é difícil de confiar em alguém na internet",
     name: "Carla Oliveira",
-    location: "Belo Horizonte, MG"
+    location: "Belo Horizonte, MG",
+    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3w5fDB8MHxzZWFyY2h8OXx8Z2lybCUyMHNtaWxpbmclMjBjbG9zZXVwfGVufDB8fDB8fA%3D%3D&w=100&q=80"
   }
 ];
 
@@ -50,7 +53,7 @@ export default function WhyWomen() {
               }}
             >
               <div className="bg-white rounded-2xl p-8 shadow-2xl hover:shadow-3xl transition-all duration-300 hover:-translate-y-3 relative overflow-hidden">
-                {/* Decorative elements */}
+                {/* Decorative emoji */}
                 <div className="absolute -top-2 -right-2 text-4xl opacity-20 group-hover:opacity-30 transition-opacity">
                   🍓
                 </div>
@@ -70,10 +73,14 @@ export default function WhyWomen() {
                   "{testimonial.quote}"
                 </blockquote>
                 
-                {/* Author */}
+                {/* Author with real image */}
                 <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-pink-400 to-red-400 rounded-full mx-auto mb-3 flex items-center justify-center">
-                    <span className="text-2xl">👩</span>
+                  <div className="w-16 h-16 rounded-full mx-auto mb-3 overflow-hidden border-2 border-pink-400">
+                    <img 
+                      src={testimonial.image} 
+                      alt={testimonial.name} 
+                      className="w-full h-full object-cover" 
+                    />
                   </div>
                   <p className="font-bold text-gray-800">{testimonial.name}</p>
                   <p className="text-sm text-gray-600">{testimonial.location}</p>
@@ -111,7 +118,7 @@ export default function WhyWomen() {
           from { opacity: 0; transform: translateY(40px); }
           to { opacity: 1; transform: translateY(0); }
         }
-        
+
         .animate-float {
           animation: float 4s ease-in-out infinite;
         }
