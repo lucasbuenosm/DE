@@ -14,8 +14,8 @@ const testimonials = [
   {
     name: "Patricia Lima",
     location: "Fortaleza, CE",
-    earning: "R$ 850",
-    period: "primeiro dia!",
+    earning: "R$ 7.850",
+    period: "Primeiros 15 dias",
     image: "https://images.pexels.com/photos/8171191/pexels-photo-8171191.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Confesso que achei que era complicado... Mas foi tudo tão simples que fiquei surpresa."
@@ -24,7 +24,7 @@ const testimonials = [
     name: "Fernanda Souza",
     location: "Brasília, DF",
     earning: "R$ 10.200",
-    period: "primeiro mês",
+    period: "Primeiro mês",
     image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Achei que precisava ter experiência, mas mesmo sem saber nada eu já comecei ganhando."
@@ -32,8 +32,8 @@ const testimonials = [
   {
     name: "Camila Rodrigues",
     location: "Porto Alegre, RS",
-    earning: "R$ 1.500",
-    period: "primeiros 4 dias",
+    earning: "R$ 3.230",
+    period: "Primeiros 7 dias",
     image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "video",
     quote: "Me surpreendi com a facilidade. Em poucos dias já estava recebendo pedidos."
