@@ -1,15 +1,13 @@
 import React, { useEffect } from 'react';
-import { Heart, Sparkles } from 'lucide-react';
+import { Heart, Sparkles, ArrowRight } from 'lucide-react';
 
 export default function App() {
   useEffect(() => {
-    // Adiciona o script SDK
     const s = document.createElement("script");
     s.src = "https://scripts.converteai.net/lib/js/smartplayer-wc/v4/sdk.js";
     s.async = true;
     document.head.appendChild(s);
 
-    // HTML original da VSL
     const playerHTML = `
       <div id="ifr_688917cb8d9ea41a82c2ee13_wrapper"
            style="margin: 30px auto; width: 100%; max-width: 600px; border-radius: 20px; overflow: hidden;
@@ -26,8 +24,6 @@ export default function App() {
         </div>
       </div>
     `;
-
-    // Injeta o HTML diretamente
     const container = document.getElementById('player-container');
     if (container) {
       container.innerHTML = playerHTML;
@@ -72,10 +68,19 @@ export default function App() {
         </div>
 
         {/* VSL Container */}
-        <div id="player-container" className="animate-fadeIn"></div>
+        <div id="player-container" className="animate-fadeIn mb-12"></div>
+
+        {/* CTA Button */}
+        <div className="text-center mb-16">
+          <button className="group bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow">
+            <span className="flex items-center justify-center gap-3">
+              QUERO GARANTIR MINHA VAGA AGORA
+              <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
+            </span>
+          </button>
+        </div>
       </div>
 
-      {/* Custom animations */}
       <style>{`
         @keyframes fadeIn {
           from { opacity: 0; transform: translateY(20px); }
@@ -101,6 +106,17 @@ export default function App() {
         }
         .sparkle-float {
           animation: float 3.5s ease-in-out infinite;
+        }
+        @keyframes pulse-glow {
+          0%, 100% {
+            box-shadow: 0 0 20px rgba(255, 255, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.3);
+          }
+          50% {
+            box-shadow: 0 0 30px rgba(255, 255, 0, 0.8), 0 0 60px rgba(255, 255, 0, 0.5);
+          }
+        }
+        .animate-pulse-glow {
+          animation: pulse-glow 2s ease-in-out infinite;
         }
       `}</style>
     </header>
