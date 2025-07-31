@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronLeft, ChevronRight, Play } from 'lucide-react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const testimonials = [
   {
@@ -7,7 +7,7 @@ const testimonials = [
     location: "Salvador, BA",
     earning: "R$ 8.590",
     period: "3 primeiras semanas",
-    image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    image: "https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753977394784-517609895_18527874256040528_1055158189624708989_n.jpg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Eu nunca imaginei que seria tão fácil começar e ganhar tão bem logo no começo!"
   },
@@ -16,7 +16,7 @@ const testimonials = [
     location: "Fortaleza, CE",
     earning: "R$ 7.850",
     period: "Nos primeiros 15 dias",
-    image: "https://images.pexels.com/photos/8171191/pexels-photo-8171191.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    image: "https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753977425064-520408136_17858372328455486_3780956705869517262_n.jpg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Confesso que achei que era complicado... Mas foi tudo tão simples que fiquei surpresa."
   },
@@ -24,8 +24,8 @@ const testimonials = [
     name: "Fernanda Souza",
     location: "Brasília, DF",
     earning: "R$ 10.200",
-    period: "Primeiro mês",
-    image: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    period: "No Primeiro mês",
+    image: "https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753977451452-10424440_281622822019872_1827049346_a.jpg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Achei que precisava ter experiência, mas mesmo sem saber nada eu já comecei ganhando."
   },
@@ -33,9 +33,9 @@ const testimonials = [
     name: "Camila Rodrigues",
     location: "Porto Alegre, RS",
     earning: "R$ 3.230",
-    period: "Primeiros 7 dias",
-    image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
-    type: "video",
+    period: "Nos Primeiros 7 dias",
+    image: "https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753977470600-457857709_2469496359907640_8468527398868860596_n.jpg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
+    type: "image",
     quote: "Me surpreendi com a facilidade. Em poucos dias já estava recebendo pedidos."
   }
 ];
@@ -108,11 +108,6 @@ export default function Testimonials() {
                             className="w-full h-full object-cover"
                           />
                         </div>
-                        {testimonial.type === 'video' && (
-                          <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-30 rounded-full">
-                            <Play className="w-8 h-8 text-white fill-current" />
-                          </div>
-                        )}
                         <div className="absolute -top-3 -right-3 text-2xl animate-bounce">✨</div>
                       </div>
 
