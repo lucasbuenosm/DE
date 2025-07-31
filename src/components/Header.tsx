@@ -57,7 +57,7 @@ export default function App() {
         <div className="text-center mb-8">
           <div className="inline-block bg-white rounded-full p-3 shadow-lg max-w-[135px] w-full mx-auto">
             <img 
-              src="https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753887397682-Design+sem+nome+%2859%29.png?w=200&auto=compress&fit=max" 
+              src="https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753975113315-Design-sem-nome-_59__11zon.webp?w=200&auto=compress&fit=max" 
               alt="Docinho Express Logo"
               className="w-full h-auto object-contain"
             />
