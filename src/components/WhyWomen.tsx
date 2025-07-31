@@ -12,13 +12,13 @@ const testimonials = [
     quote: "Graças a Deus encontrei um trabalho que eu mesma defino os meus horários e dias.",
     name: "Maria Santos",
     location: "Rio de Janeiro, RJ",
-    image: "https://images.unsplash.com/photo-1607746882042-944635dfe10e?ixlib=rb-4.0.3&ixid=M3w5fDB8MHxzZWFyY2h8Mnx8d29tYW4lMjB3aXRoJTIwbG9uZyUyMGhhaXJ8ZW58MHx8MHx8&w=100&q=80"
+    image: "https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753977851783-483284859_961250739483576_518405043398850938_n.jpg"
   },
   {
     quote: "Fiquei tão feliz em receber tudo certinho, hoje em dia é difícil de confiar em alguém na internet",
     name: "Carla Oliveira",
     location: "Belo Horizonte, MG",
-    image: "https://images.unsplash.com/photo-1529626455594-4ff0802cfb7e?ixlib=rb-4.0.3&ixid=M3w5fDB8MHxzZWFyY2h8OXx8Z2lybCUyMHNtaWxpbmclMjBjbG9zZXVwfGVufDB8fDB8fA%3D%3D&w=100&q=80"
+    image: "https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753977870664-464075549_1596385527649184_8960561385995800953_n.jpg"
   }
 ];
 
