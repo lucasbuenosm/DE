@@ -51,7 +51,7 @@ export default function CTA() {
               <Clock className="w-8 h-8 text-yellow-300 mx-auto mb-3" />
               <p className="text-white font-semibold">
                 <span className="text-yellow-300 font-bold">Vagas limitadas</span><br />
-                Apenas hoje com desconto especial
+                Apenas hoje!
               </p>
             </div>
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 text-center">
@@ -79,10 +79,10 @@ export default function CTA() {
                   <span className="font-semibold">✅ Acesso imediato</span>
                 </div>
                 <div className="bg-green-600 bg-opacity-50 rounded-lg p-3">
-                  <span className="font-semibold">✅ Suporte completo</span>
+                  <span className="font-semibold">✅ Suporte pelo WhatsApp</span>
                 </div>
                 <div className="bg-green-600 bg-opacity-50 rounded-lg p-3">
-                  <span className="font-semibold">✅ Garantia 7 dias</span>
+                  <span className="font-semibold">✅ Treinamento completo</span>
                 </div>
               </div>
             </div>
