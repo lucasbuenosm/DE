@@ -6,7 +6,7 @@ const testimonials = [
     quote: "Estou muito Feliz, Fiz R$732 no primeiro dia!",
     name: "Ana Silva",
     location: "São Paulo, SP",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=M3w5fDB8MHxzZWFyY2h8M3x8YnJhemlsaWFuJTIwd29tYW58ZW58MHx8MHx8&w=100&q=80"
+    image: "https://123pagebuilder.s3.us-east-1.amazonaws.com/123tapronto1753977675766-499316018_18509821729033374_2152396972257242858_n.jpg"
   },
   {
     quote: "Graças a Deus encontrei um trabalho que eu mesma defino os meus horários e dias.",
