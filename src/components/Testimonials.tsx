@@ -15,7 +15,7 @@ const testimonials = [
     name: "Patricia Lima",
     location: "Fortaleza, CE",
     earning: "R$ 7.850",
-    period: "Primeiros 15 dias",
+    period: "Nos primeiros 15 dias",
     image: "https://images.pexels.com/photos/8171191/pexels-photo-8171191.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop",
     type: "image",
     quote: "Confesso que achei que era complicado... Mas foi tudo tão simples que fiquei surpresa."
@@ -39,6 +39,22 @@ const testimonials = [
     quote: "Me surpreendi com a facilidade. Em poucos dias já estava recebendo pedidos."
   }
 ];
+
+// ✅ Função para ajustar o período de forma elegante
+const formatPeriod = (period) => {
+  const lower = period.toLowerCase();
+  if (
+    lower.startsWith('primeiro') ||
+    lower.startsWith('primeiros') ||
+    lower.startsWith('nos') ||
+    lower.startsWith('nas') ||
+    lower.startsWith('no') ||
+    lower.startsWith('na')
+  ) {
+    return period;
+  }
+  return `Em ${period}`;
+};
 
 export default function Testimonials() {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -108,7 +124,7 @@ export default function Testimonials() {
 
                         <div className="bg-gradient-to-r from-green-400 to-green-600 rounded-xl p-4 text-white text-center mb-4">
                           <p className="text-3xl font-bold">{testimonial.earning}</p>
-                          <p className="text-green-100">na {testimonial.period}</p>
+                          <p className="text-green-100">{formatPeriod(testimonial.period)}</p>
                         </div>
 
                         <p className="text-gray-700 italic">
