@@ -12,10 +12,13 @@ export default function CTA() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleCheckoutClick = () => {
+  const handleCheckoutClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     if (typeof window !== 'undefined' && typeof fbq !== 'undefined') {
       fbq('track', 'InitiateCheckout');
     }
+    // Redireciona na mesma aba, cancelando o comportamento padrão que abriria em nova aba
+    e.preventDefault();
+    window.location.href = "https://pagamento.morangolucrativo.app/checkout/191350063:1";
   };
 
   return (
@@ -43,9 +46,8 @@ export default function CTA() {
               id="smartplayer-click-event-1"
               className="smartplayer-click-event group inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow"
               href="https://pagamento.morangolucrativo.app/checkout/191350063:1"
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={handleCheckoutClick}
+              // removi target _blank e rel para evitar popup
             >
               <span className="flex items-center justify-center gap-3">
                 QUERO GARANTIR MINHA VAGA AGORA
