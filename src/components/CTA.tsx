@@ -16,6 +16,7 @@ export default function CTA() {
     if (typeof window !== 'undefined' && typeof fbq !== 'undefined') {
       fbq('track', 'InitiateCheckout');
     }
+    window.open('https://pagamento.morangolucrativo.app/checkout/191350063:1', '_blank');
   };
 
   return (
@@ -40,20 +41,17 @@ export default function CTA() {
 
         {/* Main CTA Button */}
         {showButton && (
-          <div className="text-center mb-12">
-            <a
+          <div className="text-center mb-12 animate-fadeIn">
+            <button
               id="smartplayer-click-event-1"
               className="smartplayer-click-event group inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow"
-              href="https://pagamento.morangolucrativo.app/checkout/191350063:1"
-              target="_blank"
-              rel="noopener noreferrer"
               onClick={handleCheckoutClick}
             >
               <span className="flex items-center justify-center gap-3">
                 QUERO GARANTIR MINHA VAGA AGORA
                 <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
               </span>
-            </a>
+            </button>
           </div>
         )}
 
@@ -109,6 +107,13 @@ export default function CTA() {
       </div>
 
       <style jsx>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: translateY(20px); }
+          to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+          animation: fadeIn 1s ease-out;
+        }
         @keyframes pulse-glow {
           0%, 100% {
             box-shadow: 0 0 20px rgba(255, 255, 0, 0.5), 0 0 40px rgba(255, 255, 0, 0.3);
@@ -117,7 +122,6 @@ export default function CTA() {
             box-shadow: 0 0 30px rgba(255, 255, 0, 0.8), 0 0 60px rgba(255, 255, 0, 0.5);
           }
         }
-
         .animate-pulse-glow {
           animation: pulse-glow 2s ease-in-out infinite;
         }
