@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { ArrowRight, Clock, Users } from 'lucide-react';
 
 export default function CTA() {
+  const [showButton, setShowButton] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowButton(true);
+    }, 210000); // 3 minutos e 30 segundos = 210000 ms
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleCheckoutClick = () => {
     if (typeof window !== 'undefined' && typeof fbq !== 'undefined') {
       fbq('track', 'InitiateCheckout');
@@ -29,21 +39,23 @@ export default function CTA() {
         </div>
 
         {/* Main CTA Button */}
-        <div className="text-center mb-12">
-          <a
-            id="smartplayer-click-event-1"
-            className="smartplayer-click-event group inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow"
-            href="https://pagamento.morangolucrativo.app/checkout/191350063:1"
-            target="_blank"
-            rel="noopener noreferrer"
-            onClick={handleCheckoutClick}
-          >
-            <span className="flex items-center justify-center gap-3">
-              QUERO GARANTIR MINHA VAGA AGORA
-              <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
-            </span>
-          </a>
-        </div>
+        {showButton && (
+          <div className="text-center mb-12">
+            <a
+              id="smartplayer-click-event-1"
+              className="smartplayer-click-event group inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow"
+              href="https://pagamento.morangolucrativo.app/checkout/191350063:1"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={handleCheckoutClick}
+            >
+              <span className="flex items-center justify-center gap-3">
+                QUERO GARANTIR MINHA VAGA AGORA
+                <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
+              </span>
+            </a>
+          </div>
+        )}
 
         {/* Urgency indicators */}
         <div className="max-w-4xl mx-auto">
@@ -74,7 +86,6 @@ export default function CTA() {
                 e libera seu acesso <span className="font-bold">imediato</span> ao sistema.
               </p>
 
-              {/* Additional benefits */}
               <div className="mt-6 grid md:grid-cols-3 gap-4 text-sm">
                 <div className="bg-green-600 bg-opacity-50 rounded-lg p-3">
                   <span className="font-semibold">✅ Acesso imediato</span>
@@ -90,7 +101,6 @@ export default function CTA() {
           </div>
         </div>
 
-        {/* Social proof */}
         <div className="text-center mt-12">
           <p className="text-green-100 text-sm opacity-80">
             🔒 Pagamento 100% seguro • Mais de 180 mulheres já trabalham conosco
