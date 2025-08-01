@@ -33,7 +33,7 @@ export default function App() {
 
     const timer = setTimeout(() => {
       setShowButton(true);
-    }, 230000); // 3m50s = 230.000ms
+    }, 230000); // 3m50s = 230000 ms
 
     return () => clearTimeout(timer);
   }, []);
@@ -42,7 +42,8 @@ export default function App() {
     if (typeof window !== 'undefined' && typeof fbq !== 'undefined') {
       fbq('track', 'InitiateCheckout');
     }
-    window.open("https://pagamento.morangolucrativo.app/checkout/191350063:1", "_blank");
+    // Redireciona na mesma aba sem popup ou nova aba
+    window.location.href = "https://pagamento.morangolucrativo.app/checkout/191350063:1";
   };
 
   return (
