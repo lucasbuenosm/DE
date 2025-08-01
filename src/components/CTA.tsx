@@ -7,7 +7,7 @@ export default function CTA() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowButton(true);
-    }, 210000); // 3 minutos e 30 segundos = 210000 ms
+    }, 230000); // 3 minutos e 50 segundos = 230000 ms
 
     return () => clearTimeout(timer);
   }, []);
@@ -16,12 +16,10 @@ export default function CTA() {
     if (typeof window !== 'undefined' && typeof fbq !== 'undefined') {
       fbq('track', 'InitiateCheckout');
     }
-    window.open('https://pagamento.morangolucrativo.app/checkout/191350063:1', '_blank');
   };
 
   return (
     <section className="py-20 bg-gradient-to-br from-green-500 via-green-600 to-emerald-600 relative overflow-hidden">
-      {/* Background animations */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 text-4xl opacity-20 animate-bounce">🍓</div>
         <div className="absolute top-40 right-20 text-3xl opacity-20 animate-pulse">✨</div>
@@ -39,23 +37,24 @@ export default function CTA() {
           </p>
         </div>
 
-        {/* Main CTA Button */}
         {showButton && (
           <div className="text-center mb-12 animate-fadeIn">
-            <button
+            <a
               id="smartplayer-click-event-1"
               className="smartplayer-click-event group inline-block bg-gradient-to-r from-yellow-400 via-yellow-500 to-orange-500 hover:from-yellow-500 hover:via-orange-500 hover:to-red-500 text-white font-bold text-xl md:text-2xl px-12 py-6 rounded-full shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 animate-pulse-glow"
+              href="https://pagamento.morangolucrativo.app/checkout/191350063:1"
+              target="_blank"
+              rel="noopener noreferrer"
               onClick={handleCheckoutClick}
             >
               <span className="flex items-center justify-center gap-3">
                 QUERO GARANTIR MINHA VAGA AGORA
                 <ArrowRight className="w-8 h-8 group-hover:translate-x-2 transition-transform" />
               </span>
-            </button>
+            </a>
           </div>
         )}
 
-        {/* Urgency indicators */}
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-6 mb-8">
             <div className="bg-white bg-opacity-20 backdrop-blur-sm rounded-xl p-6 text-center">
