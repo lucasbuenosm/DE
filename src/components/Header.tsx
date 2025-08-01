@@ -33,7 +33,7 @@ export default function App() {
 
     const timer = setTimeout(() => {
       setShowButton(true);
-    }, 210000); // 3m30s
+    }, 230000); // 3m50s = 230.000ms
 
     return () => clearTimeout(timer);
   }, []);
@@ -109,12 +109,12 @@ export default function App() {
           from { opacity: 0; transform: translateY(20px); }
           to { opacity: 1; transform: translateY(0); }
         }
+        .animate-fadeIn {
+          animation: fadeIn 1s ease-out;
+        }
         @keyframes float {
           0%, 100% { transform: translateY(0); }
           50% { transform: translateY(-20px); }
-        }
-        .animate-fadeIn {
-          animation: fadeIn 1s ease-out;
         }
         .strawberry-float,
         .strawberry-float-2 {
